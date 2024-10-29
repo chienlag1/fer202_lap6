@@ -85,7 +85,7 @@ function Home() {
                 studentCode: '',
                 isActive: '',
             })
-            setShowSuccessAdd(true);
+            alert("Add successfully")
         } catch (error) {
             console.log(error);
         }
@@ -98,22 +98,11 @@ function Home() {
                 method: 'DELETE',
             });
             await getAllStudents();
-            setShowSuccessDelete(true);
+            alert("Delete successfully")
         } catch (error) {
             console.log(error);
         }
-        // let arr = [...students];
-        // arr = arr.filter((item) => {
-        //   return item.id !== id;
-        // })
-        // setStudents(arr);
-        // setStudents(prev => {
-        //   prev = prev.filter((item) => {
-        //     return item.id !== id
-        //   });
-        //   return prev;
-        // });
-        // setCheckedStudents(prev => (prev.filter((item) => (item !== id))))
+     
     };
 
     const handleShowModalUpdate = (student) => {
